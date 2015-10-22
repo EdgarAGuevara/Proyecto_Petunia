@@ -16,10 +16,13 @@
 	"buffers":
 	[
 		{
+			"contents": "<!doctype html>\n<!--[if lt IE 7]>      <html class=\"no-js lt-ie9 lt-ie8 lt-ie7\" lang=\"\"> <![endif]-->\n<!--[if IE 7]>         <html class=\"no-js lt-ie9 lt-ie8\" lang=\"\"> <![endif]-->\n<!--[if IE 8]>         <html class=\"no-js lt-ie9\" lang=\"\"> <![endif]-->\n<!--[if gt IE 8]><!--> <html class=\"no-js\" lang=\"\"> <!--<![endif]-->\n    <head>\n        <meta charset=\"utf-8\">\n        <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\">\n        <title></title>\n        <meta name=\"description\" content=\"\">\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n        <link rel=\"apple-touch-icon\" href=\"apple-touch-icon.png\">\n\n        <link rel=\"stylesheet\" href=\"css/bootstrap.min.css\">\n        <style>\n            body {\n                padding-top: 50px;\n                padding-bottom: 20px;\n            }\n        </style>\n        <link rel=\"stylesheet\" href=\"css/bootstrap-theme.min.css\">\n        <link rel=\"stylesheet\" href=\"css/main.css\">\n\n        <script src=\"js/vendor/modernizr-2.8.3-respond-1.4.2.min.js\"></script>\n    </head>\n    <body>\n        <!--[if lt IE 8]>\n            <p class=\"browserupgrade\">You are using an <strong>outdated</strong> browser. Please <a href=\"http://browsehappy.com/\">upgrade your browser</a> to improve your experience.</p>\n        <![endif]-->\n    <nav class=\"navbar navbar-inverse navbar-fixed-top\" role=\"navigation\">\n      <div class=\"container\">\n        <div class=\"navbar-header\">\n          <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#navbar\" aria-expanded=\"false\" aria-controls=\"navbar\">\n            <span class=\"sr-only\">Toggle navigation</span>\n            <span class=\"icon-bar\"></span>\n            <span class=\"icon-bar\"></span>\n            <span class=\"icon-bar\"></span>\n          </button>\n          <a class=\"navbar-brand\" href=\"#\">Project name</a>\n        </div>\n        <div id=\"navbar\" class=\"navbar-collapse collapse\">\n          <form class=\"navbar-form navbar-right\" role=\"form\">\n            <div class=\"form-group\">\n              <input type=\"text\" placeholder=\"Email\" class=\"form-control\">\n            </div>\n            <div class=\"form-group\">\n              <input type=\"password\" placeholder=\"Password\" class=\"form-control\">\n            </div>\n            <button type=\"submit\" class=\"btn btn-success\">Sign in</button>\n          </form>\n        </div><!--/.navbar-collapse -->\n      </div>\n    </nav>\n\n    <!-- Main jumbotron for a primary marketing message or call to action -->\n    <div class=\"jumbotron\">\n      <div class=\"container\">\n        <h1>Hello, world!</h1>\n        <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>\n        <p><a class=\"btn btn-primary btn-lg\" href=\"#\" role=\"button\">Learn more &raquo;</a></p>\n      </div>\n    </div>\n\n    <div class=\"container\">\n      <!-- Example row of columns -->\n      <div class=\"row\">\n        <div class=\"col-md-4\">\n          <h2>Heading</h2>\n          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>\n          <p><a class=\"btn btn-default\" href=\"#\" role=\"button\">View details &raquo;</a></p>\n        </div>\n        <div class=\"col-md-4\">\n          <h2>Heading</h2>\n          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>\n          <p><a class=\"btn btn-default\" href=\"#\" role=\"button\">View details &raquo;</a></p>\n       </div>\n        <div class=\"col-md-4\">\n          <h2>Heading</h2>\n          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>\n          <p><a class=\"btn btn-default\" href=\"#\" role=\"button\">View details &raquo;</a></p>\n        </div>\n      </div>\n\n      <hr>\n\n      <footer>\n        <p>&copy; Company 2015</p>\n      </footer>\n    </div> <!-- /container -->        \n    	<script src=\"//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js\"></script>\n        <script>window.jQuery || document.write('<script src=\"js/vendor/jquery-1.11.2.min.js\"><\\/script>')</script>\n\n        <script src=\"js/vendor/bootstrap.min.js\"></script>\n\n        <script src=\"js/main.js\"></script>\n\n        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->\n        <script>\n            // (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=\n            // function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;\n            // e=o.createElement(i);r=o.getElementsByTagName(i)[0];\n            // e.src='//www.google-analytics.com/analytics.js';\n            // r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));\n            // ga('create','UA-XXXXX-X','auto');ga('send','pageview');\n        </script>\n    </body>\n</html>\n",
 			"file": "APP/index.html",
+			"file_size": 5301,
+			"file_write_time": 130898591974248930,
 			"settings":
 			{
-				"buffer_size": 5283,
+				"buffer_size": 5307,
 				"line_ending": "Unix",
 				"name": "index.html"
 			}
@@ -28,7 +31,7 @@
 			"file": "APP/bienvenida.html",
 			"settings":
 			{
-				"buffer_size": 3978,
+				"buffer_size": 3996,
 				"line_ending": "Windows"
 			}
 		},
@@ -36,7 +39,31 @@
 			"file": "APP/principal.html",
 			"settings":
 			{
-				"buffer_size": 3697,
+				"buffer_size": 3746,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "APP/contacto.html",
+			"settings":
+			{
+				"buffer_size": 5253,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "APP/localizar.html",
+			"settings":
+			{
+				"buffer_size": 3904,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "APP/pruebageo.html",
+			"settings":
+			{
+				"buffer_size": 1158,
 				"line_ending": "Windows"
 			}
 		},
@@ -44,7 +71,15 @@
 			"file": "APP/regMascota.html",
 			"settings":
 			{
-				"buffer_size": 5713,
+				"buffer_size": 5842,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "APP/consultar.html",
+			"settings":
+			{
+				"buffer_size": 5224,
 				"line_ending": "Windows"
 			}
 		}
@@ -87,7 +122,10 @@
 	"expanded_folders":
 	[
 		"/C/Users/Edgar/Documents/Poyecto_petunia",
-		"/C/Users/Edgar/Documents/Poyecto_petunia/APP"
+		"/C/Users/Edgar/Documents/Poyecto_petunia/APP",
+		"/C/Users/Edgar/Documents/Poyecto_petunia/APP/img",
+		"/C/Users/Edgar/Documents/Poyecto_petunia/APP/js",
+		"/C/Users/Edgar/Documents/Poyecto_petunia/APP/js/vendor"
 	],
 	"file_history":
 	[
@@ -96,7 +134,7 @@
 	],
 	"find":
 	{
-		"height": 0.0
+		"height": 27.0
 	},
 	"find_in_files":
 	{
@@ -110,6 +148,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"map"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -127,7 +166,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 4,
 			"sheets":
 			[
 				{
@@ -136,15 +175,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5283,
+						"buffer_size": 5307,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1309,
-								2430
+								4430,
+								4430
 							]
 						],
 						"settings":
@@ -153,10 +192,10 @@
 							"syntax": "Packages/HTML/HTML.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 423.0,
+						"translation.y": 2242.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
@@ -165,15 +204,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3978,
+						"buffer_size": 3996,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2032,
-								2032
+								0,
+								3996
 							]
 						],
 						"settings":
@@ -184,10 +223,10 @@
 							"word_wrap": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 866.0,
+						"translation.y": 705.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
@@ -196,15 +235,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3697,
+						"buffer_size": 3746,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1958,
-								1958
+								0,
+								3746
 							]
 						],
 						"settings":
@@ -214,27 +253,117 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 490.0,
+						"translation.y": 603.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "APP/contacto.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5253,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								5253
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1356.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "APP/localizar.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3904,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3298,
+								3298
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 945.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "APP/regMascota.html",
+					"buffer": 5,
+					"file": "APP/pruebageo.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5713,
+						"buffer_size": 1158,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1960,
-								1960
+								262,
+								181
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "APP/regMascota.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5842,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2087,
+								2087
 							]
 						],
 						"settings":
@@ -244,10 +373,40 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 845.0,
+						"translation.y": 437.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "APP/consultar.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5224,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2090,
+								2090
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 551.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
 					"type": "text"
 				}
 			]
@@ -255,11 +414,11 @@
 	],
 	"incremental_find":
 	{
-		"height": 0.0
+		"height": 27.0
 	},
 	"input":
 	{
-		"height": 0.0
+		"height": 34.0
 	},
 	"layout":
 	{
@@ -292,7 +451,7 @@
 	"project": "project_petunia.sublime-project",
 	"replace":
 	{
-		"height": 0.0
+		"height": 50.0
 	},
 	"save_all_on_build": true,
 	"select_file":

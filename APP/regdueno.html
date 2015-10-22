@@ -36,15 +36,22 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="principal.html">LOOKIN</a>
+          <a class="navbar-brand" href="bienvenida.html">LOOKIN</a>
         </div>
         <div id="menuIngresar" class="navbar-collapse collapse">
-           <ul class="nav navbar-nav">
-	        <li><a href="">Registro Mascota</a></li>
-	        <li><a href="localizar.html">Localizar</a></li>a
-	        <li><a href="consultar.html">Consultar</a></li>
-	        <li><a href="contacto.html">Contactanos</a></li>
-	      </ul>
+          <form class="navbar-form navbar-right" role="form" action="principal.html">
+            <div class="form-group">
+              <input type="text" placeholder="Usuario" class="form-control">
+            </div>
+            <div class="form-group">
+              <input type="password" placeholder="Contraseña" class="form-control">
+            </div>
+              <button type="submit" class="btn btn-success">INGRESAR</button>
+          </form>           
+          <ul class="nav navbar-nav">
+            <li><a href="regdueno.html">Registrar</a></li>
+            <li><a href="busdueno.html">Buscar Dueño</a></li>
+          </ul>
         </div><!--/.navbar-collapse -->
       </div>
     </nav>
@@ -52,7 +59,7 @@
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
       <div class="container">
-        <h1>Registro de Mascota </h1>
+        <h1>Registro de Dueño </h1>
         <!-- <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p> -->
       </div>
     </div>
@@ -61,40 +68,49 @@
 
       <div class="form-horizontal">
           <form action="" role="form">
-                <div class="input-group input-group-lg">
-                  <span class="input-group-addon" id="sizing-addon1">Nombre Mascota</span>
-                  <input id="txtNombre" type="text" class="form-control" placeholder="FIFI" aria-describedby="sizing-addon1">
-                </div>
-                <br>
-                <div class="input-group input-group-lg">
-                  <span class="input-group-addon" id="sizing-addon1">Raza</span>
-                  <input id="txtRaza" type="text" class="form-control" placeholder="Pastor Aleman" aria-describedby="sizing-addon1">
-                </div>
-                <br>
-                <div class="input-group input-group-lg">
-                  <span class="input-group-addon" id="sizing-addon1">Color/es</span>
-                  <input id="txtColor" type="text" class="form-control" placeholder="Negro con manchas blancas" aria-describedby="sizing-addon1">
-                </div>
-                <br>
-                <div class="input-group input-group-lg">
-                  <span class="input-group-addon" id="sizing-addon1">Tamaño</span>
-                    <select id="cmbTamano" class="form-control">
-                      <option value="1">Pequeño</option>
-                      <option value="2">Mediano</option>
-                      <option value="3">Grande</option>
-                    </select>
-                </div>
-                 <br>
-                <div class="input-group input-group-lg">
-                  <span class="input-group-addon" id="sizing-addon1">GPS/ID</span>
-                  <input id="txtIdMascota" type="text" class="form-control" placeholder="1234" aria-describedby="sizing-addon1">
-                </div>
-                <br>
-                <div class="text-center">
-                    <button type="submit" class="btn-lg btn-success">Registrar</button>
-                    <button type="button" class="btn-lg btn-success">Limpiar</button>    
-                </div>
-                
+            <div class="input-group input-group-lg">
+              <span class="input-group-addon" id="sizing-addon1">Nombre</span>
+              <input id="txtNombre" type="text" class="form-control" placeholder="Pedro" aria-describedby="sizing-addon1">
+            </div>
+            <br>
+            <div class="input-group input-group-lg">
+              <span class="input-group-addon" id="sizing-addon1">Apellido</span>
+              <input id="txtApellido" type="text" class="form-control" placeholder="Gutierrez" aria-describedby="sizing-addon1">
+            </div>
+            <br>
+            <div class="input-group input-group-lg">
+              <span class="input-group-addon" id="sizing-addon1">Tipo de Documento</span>
+                <select id="cmbTipoIden" class="form-control">
+                  <option value="1">Venezolano/a</option>
+                  <option value="2">Extranjero/a</option>
+                  <option value="3">Otro</option>
+                </select>
+            </div>
+            <br>
+            <div class="input-group input-group-lg">
+              <span class="input-group-addon" id="sizing-addon1">Número de Documento</span>
+              <input id="txtNumIden" type="text" class="form-control" placeholder="12345678" aria-describedby="sizing-addon1">
+            </div>
+            <br>
+            <div class="input-group input-group-lg">
+              <span class="input-group-addon" id="sizing-addon1">Telefono</span>
+              <input id="txtTelefono" type="text" class="form-control" placeholder="012345678901" aria-describedby="sizing-addon1">
+            </div>
+            <br>
+            <div class="input-group input-group-lg">
+              <span class="input-group-addon" id="sizing-addon1">Correo</span>
+              <input id="txtCorreo" type="text" class="form-control" placeholder="pedro.gutierrez@dominio.com" aria-describedby="sizing-addon1">
+            </div>
+            <br>
+            <div class="input-group input-group-lg">
+              <span class="input-group-addon" id="sizing-addon1">Confirmación de Correo</span>
+              <input id="txtConfirmCorreo" type="text" class="form-control" placeholder="pedro.gutierrez@dominio.com" aria-describedby="sizing-addon1">
+            </div>
+            <br>  
+            <div class="text-center">
+                <button type="submit" class="btn-lg btn-success">Registrar</button>
+                <button type="button" class="btn-lg btn-success">Limpiar</button>    
+            </div>
           </form>
       </div>
       <hr>
