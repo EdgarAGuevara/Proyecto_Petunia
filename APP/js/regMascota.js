@@ -1,9 +1,9 @@
 $(document).ready(function(){
 //getdeails será nuestra función para enviar la solicitud ajax
-var getdetails = function(nick,pass){
+var setMascotaNueva = function(nombre,raza,color,tamano,gps,num_iden_dueno){
   return $.ajax({
     // En data puedes utilizar un objeto JSON, un array o un query string
-    data: {"solicitud" : "getConParametros", "nick" : nick,"pass" : pass},
+    data: {"solicitud" : "setMascotaNueva", "nombre":nombre,"raza":raza,"color":color,"tamano":tamano,"gps":gps,"num_iden_dueno":num_iden_dueno},
     //Cambiar a type: POST si necesario
     type: "GET",
     // Formato de datos que se espera en la respuesta
@@ -11,19 +11,19 @@ var getdetails = function(nick,pass){
     crossDomain :true,
     headers:{"Access-Control-Allow-Origin": "*"},
     // URL a la que se enviará la solicitud Ajax
-    url: "http://192.168.1.109/webservices/webservices/crudUserDueno.php",
+    url: "http://192.168.1.109/webservices/webservices/crudMascota.php",
 	});
 }
 
+
 //al hacer click sobre cualquier elemento que tenga el atributo data-user.....
-$('#formIngresar').submit(function(e){
+$('#segMascota').submit(function(e){
     //Detenemos el comportamiento normal del evento click sobre el elemento clicado
     e.preventDefault();
     //Mostramos texto de que la solicitud está en curso
     // $("#response-container").html("<p>Buscando...</p>");
     //this hace referencia al elemento que ha lanzado el evento click
-    //con el método .data('user') obtenemos el valor del atributo data-user de dicho elemento y lo pasamos a la función getdetails definida anteriormente
-    getdetails($('#txtNick').val(),$('#txtPass').val())
+    setMascotaNueva($('#txtNombre').val(),$('#txtRaza').val(),$('#txtColor').val(),$('#cmbTamano').val(),$('#txtIdMascota').val(),sessionStorage.userNum_identificacion)
         .done( function( response ) {
             //done() es ejecutada cuándo se recibe la respuesta del servidor. response es el objeto JSON recibido
             if( response.success ) {
@@ -44,16 +44,7 @@ $('#formIngresar').submit(function(e){
                 // $("#response-container").html(output);
                 console.log(response.data);
                 console.log(response.data.message);
-                localStorage.clear();
-                sessionStorage.clear();
-                sessionStorage.setItem("userNombre", response.data.users[0].nombre);
-                sessionStorage.setItem("userApellido", response.data.users[0].apellido);
-                sessionStorage.setItem("userNum_identificacion", response.data.users[0].num_identificacion);
-                sessionStorage.setItem("userCorreo", response.data.users[0].correo);
-                sessionStorage.setItem("userTelefono", response.data.users[0].telefono);
-                sessionStorage.setItem("userTipo_identifiacion", response.data.users[0].tipo_identificacion);
-                
-                $('#formIngresar').unbind('submit').submit();
+                $('#segMascota')[0].reset();
             } else {
                 //response.success no es true
                 // $("#response-container").html('No ha habido suerte: ' + response.data.message);
@@ -65,4 +56,7 @@ $('#formIngresar').submit(function(e){
              console.log(textStatus);
         });
     });
+
 });
+
+/*Funcion limpiar*/

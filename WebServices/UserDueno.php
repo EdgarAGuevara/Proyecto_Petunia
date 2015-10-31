@@ -1,22 +1,22 @@
 <?php	
 include_once 'DBAbstractModel.php';
-
 /**
 * 
 */
-class ClassName extends DBAbstractModel
+class UserDueno extends DBAbstractModel
 {
 	private $num_identificacion;
 	private $nombre	;
 	private $apellido;
 	private $correo	;
 	private $telefono;
-	private $tipo_identifiacion;
+	private $tipo_identificacion;
+	private $pass;
 
 	public function getNum_identificacion	(){
 		return $this->num_identificacion;
 	}
-	public function setNum_identificacion	($num_identificacion){
+	public function setNum_identificacion($num_identificacion){
 		$this->num_identificacion=$num_identificacion;
 	}
 	public function getNombre	(){
@@ -50,18 +50,117 @@ class ClassName extends DBAbstractModel
 		$this->telefono=$telefono;
 
 	}
-	public function getTipo_identifiacion(){
-		return $this->tipo_identifiacion;
+	public function getTipo_identificacion(){
+		return $this->tipo_identificacion;
 
 	}
-	public function setTipo_identifiacion($tipo_identifiacion){
-		$this->tipo_identifiacion=$tipo_identifiacion;
+	public function setTipo_identificacion($tipo_identificacion){
+		$this->tipo_identificacion=$tipo_identificacion;
+
+	}
+	public function getPass(){
+		return $this->pass;
+	}
+	public function setPass($pass){
+		$this->pass=$pass;
 
 	}
 
-	// function __construct(argument)
-	// {
-	// 	# code...
-	// }
+	public function get($class='')
+	{
+		$this->query="select * from user_dueno  where num_identificacion=".$this->getNum_identificacion().";";
+		// var_dump($this->query);
+		if ($this->getResult($class)) {
+			// var_dump();
+			return $this->rows;
+		} else {
+			return false;
+		}
+	}
+	
+	public function getConParametros($class='',$user)
+	{
+		$this->query="select * from user_dueno  
+			where num_identificacion= ".$user->getNum_identificacion()." and tipo_identificacion= ".$this->getTipo_identificacion;
+		if ($this->getResult($class)) {
+			// var_dump();
+			return $this->rows;
+		} else {
+			return false;
+		}
+	}
+
+	public function getUserValidado($class,$nick='',$pass='')
+	{
+		$this->query="select * from user_dueno  
+			where correo='".$nick."'"." and pass='".$pass."'";
+		// var_dump($this->query);
+		if ($this->getResult($class)) {
+			// var_dump();
+			return $this->rows;
+		} else {
+			return false;
+		}
+	}
+
+	public function set()
+	{
+		$this->query="INSERT INTO user_dueno (num_identificacion,nombre,apellido,correo,telefono,tipo_identificacion,pass) 
+						VALUES (?,?,?,?,?,?,?)";
+		$values= array($this->getNum_identificacion(),
+			$this->getNombre(),
+			$this->getApellido(),
+			$this->getCorreo(),
+			$this->getTelefono(),
+			$this->getTipo_identificacion(),
+			$this->getPass());
+		// var_dump($values);
+		if ($this->setDatos($values)) {
+			// var_dump();
+			return true;
+		} else {
+			return false;
+		}
+	}
+	/*TODO QUE FUNCIONE SOLO INDEPENDIENTEMENTE*/
+	public function edit()
+	{
+		$this->query="UPDATE user_dueno SET num_identificacion=?,nombre=?,apellido=?,correo=?,telefono=?,tipo_identifiacion=? 
+						WHERE num_identificacion=? AND tipo_identificacion=?";
+		$values= array($this->getNum_identificacion(),
+			$this->getNombre(),
+			$this->getApellido(),
+			$this->getCorreo(),
+			$this->getTelefono(),
+			$this->getTipo_identificacion(),
+			$this->getNum_identificacion(),
+			$this->getTipo_identificacion() );
+		// var_dump($values);
+		if ($this->setDatos($values)) {
+			// var_dump();
+			return $this->rows;
+		} else {
+			return false;
+		}
+	}
+
+	public function delete()
+	{
+		$this->query="DELETE FROM user_dueno  
+						WHERE  num_identificacion=? AND tipo_identificacion=?";
+		$values= array($this->getNum_identificacion(),
+			$this->getTipo_identificacion() );
+		// var_dump($values);
+		if ($this->setDatos($values)) {
+			// var_dump();
+			return $this->rows;
+		} else {
+			return false;
+		}
+	}
+
+	public function __construct() {
+    	// allocate your stuff
+    }
 }
 ?>

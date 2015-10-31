@@ -39,14 +39,14 @@
 	          <a class="navbar-brand" href="">LOOKIN</a>
 	        </div>
 	        <div id="menuIngresar" class="navbar-collapse collapse">
-	          <form class="navbar-form navbar-right" role="form" action="principal.html">
+	          <form class="navbar-form navbar-right" role="form" action="principal.html" id="formIngresar">
 	            <div class="form-group">
-	              <input type="text" placeholder="Usuario" class="form-control">
+	              <input id="txtNick" type="correo" placeholder="correo@dominio.com" class="form-control">
 	            </div>
 	            <div class="form-group">
-	              <input type="password" placeholder="Contraseña" class="form-control">
+	              <input id="txtPass" type="password" placeholder="Contraseña" class="form-control">
 	            </div>
-	            <button type="submit" class="btn btn-success">INGRESAR</button>
+	            <button id="btnIngresar" type="submit" class="btn btn-success">INGRESAR</button>
 	          </form>           
 			  <ul class="nav navbar-nav">
 		        <li><a href="regdueno.html">Registrar</a></li>
@@ -58,6 +58,12 @@
 
 	    <!-- Main jumbotron for a primary marketing message or call to action -->
 	    <div class="jumbotron">
+	      <div class="alert alert-dismissible sr-only" role="alert" id="msgInfo">
+	        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+	        <span aria-hidden="true">&times;</span></button>
+	        <strong>Exito</strong> <span id="msg"> </span>
+	      </div>
+	      
 	      <div class="container">
 	        <h1>Bienvenido a Lookin</h1>
 	        <p>AQUI VA PEQUEÑA DESCRIPCION DE LA APP</p>

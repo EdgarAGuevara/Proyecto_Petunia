@@ -4,6 +4,34 @@
 		"selected_items":
 		[
 			[
+				"f",
+				"fun	function …"
+			],
+			[
+				"incl",
+				"incl1	include_once …"
+			],
+			[
+				"c",
+				"class	class …"
+			],
+			[
+				"close",
+				"close_conn"
+			],
+			[
+				"if",
+				"ifelse	if … else …"
+			],
+			[
+				"th",
+				"this"
+			],
+			[
+				"co",
+				"conn"
+			],
+			[
 				"a",
 				"action	Attr"
 			],
@@ -16,70 +44,57 @@
 	"buffers":
 	[
 		{
-			"contents": "<!doctype html>\n<!--[if lt IE 7]>      <html class=\"no-js lt-ie9 lt-ie8 lt-ie7\" lang=\"\"> <![endif]-->\n<!--[if IE 7]>         <html class=\"no-js lt-ie9 lt-ie8\" lang=\"\"> <![endif]-->\n<!--[if IE 8]>         <html class=\"no-js lt-ie9\" lang=\"\"> <![endif]-->\n<!--[if gt IE 8]><!--> <html class=\"no-js\" lang=\"\"> <!--<![endif]-->\n    <head>\n        <meta charset=\"utf-8\">\n        <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\">\n        <title></title>\n        <meta name=\"description\" content=\"\">\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n        <link rel=\"apple-touch-icon\" href=\"apple-touch-icon.png\">\n\n        <link rel=\"stylesheet\" href=\"css/bootstrap.min.css\">\n        <style>\n            body {\n                padding-top: 50px;\n                padding-bottom: 20px;\n            }\n        </style>\n        <link rel=\"stylesheet\" href=\"css/bootstrap-theme.min.css\">\n        <link rel=\"stylesheet\" href=\"css/main.css\">\n\n        <script src=\"js/vendor/modernizr-2.8.3-respond-1.4.2.min.js\"></script>\n    </head>\n    <body>\n        <!--[if lt IE 8]>\n            <p class=\"browserupgrade\">You are using an <strong>outdated</strong> browser. Please <a href=\"http://browsehappy.com/\">upgrade your browser</a> to improve your experience.</p>\n        <![endif]-->\n    <nav class=\"navbar navbar-inverse navbar-fixed-top\" role=\"navigation\">\n      <div class=\"container\">\n        <div class=\"navbar-header\">\n          <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#navbar\" aria-expanded=\"false\" aria-controls=\"navbar\">\n            <span class=\"sr-only\">Toggle navigation</span>\n            <span class=\"icon-bar\"></span>\n            <span class=\"icon-bar\"></span>\n            <span class=\"icon-bar\"></span>\n          </button>\n          <a class=\"navbar-brand\" href=\"#\">Project name</a>\n        </div>\n        <div id=\"navbar\" class=\"navbar-collapse collapse\">\n          <form class=\"navbar-form navbar-right\" role=\"form\">\n            <div class=\"form-group\">\n              <input type=\"text\" placeholder=\"Email\" class=\"form-control\">\n            </div>\n            <div class=\"form-group\">\n              <input type=\"password\" placeholder=\"Password\" class=\"form-control\">\n            </div>\n            <button type=\"submit\" class=\"btn btn-success\">Sign in</button>\n          </form>\n        </div><!--/.navbar-collapse -->\n      </div>\n    </nav>\n\n    <!-- Main jumbotron for a primary marketing message or call to action -->\n    <div class=\"jumbotron\">\n      <div class=\"container\">\n        <h1>Hello, world!</h1>\n        <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>\n        <p><a class=\"btn btn-primary btn-lg\" href=\"#\" role=\"button\">Learn more &raquo;</a></p>\n      </div>\n    </div>\n\n    <div class=\"container\">\n      <!-- Example row of columns -->\n      <div class=\"row\">\n        <div class=\"col-md-4\">\n          <h2>Heading</h2>\n          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>\n          <p><a class=\"btn btn-default\" href=\"#\" role=\"button\">View details &raquo;</a></p>\n        </div>\n        <div class=\"col-md-4\">\n          <h2>Heading</h2>\n          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>\n          <p><a class=\"btn btn-default\" href=\"#\" role=\"button\">View details &raquo;</a></p>\n       </div>\n        <div class=\"col-md-4\">\n          <h2>Heading</h2>\n          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>\n          <p><a class=\"btn btn-default\" href=\"#\" role=\"button\">View details &raquo;</a></p>\n        </div>\n      </div>\n\n      <hr>\n\n      <footer>\n        <p>&copy; Company 2015</p>\n      </footer>\n    </div> <!-- /container -->        \n    	<script src=\"//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js\"></script>\n        <script>window.jQuery || document.write('<script src=\"js/vendor/jquery-1.11.2.min.js\"><\\/script>')</script>\n\n        <script src=\"js/vendor/bootstrap.min.js\"></script>\n\n        <script src=\"js/main.js\"></script>\n\n        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->\n        <script>\n            // (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=\n            // function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;\n            // e=o.createElement(i);r=o.getElementsByTagName(i)[0];\n            // e.src='//www.google-analytics.com/analytics.js';\n            // r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));\n            // ga('create','UA-XXXXX-X','auto');ga('send','pageview');\n        </script>\n    </body>\n</html>\n",
-			"file": "APP/index.html",
-			"file_size": 5301,
-			"file_write_time": 130898591974248930,
+			"contents": "<?php\n$servername = \"localhost\";\n$username = \"lookin\";\n$password = \"lookin123\";\n$dbname = \"lookin\";\n\ntry {\n    $conn = new PDO(\"mysql:host=$servername;dbname=$dbname\", $username, $password);\n    // set the PDO error mode to exception\n    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);\n    echo \"Connected successfully\"; \n\n    $sql = \"INSERT INTO mascota (firstname, lastname, email)\n	VALUES ('John', 'Doe', 'john@example.com')\";\n\n	if ($conn->query($sql) === TRUE) {\n	    echo \"New record created successfully\";\n	} else {\n	    echo \"Error: \" . $sql . \"<br>\" . $conn->error;\n	}\n	$conn=null;\n    }\ncatch(PDOException $e)\n    {\n    echo \"Connection failed: \" . $e->getMessage();\n    }\n\n\n?>",
+			"file": "WebServices/Crud.php",
+			"file_size": 467,
+			"file_write_time": 130903786984508798,
 			"settings":
 			{
-				"buffer_size": 5307,
-				"line_ending": "Unix",
-				"name": "index.html"
-			}
-		},
-		{
-			"file": "APP/bienvenida.html",
-			"settings":
-			{
-				"buffer_size": 3996,
+				"buffer_size": 702,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "APP/principal.html",
+			"file": "WebServices/DBAbstractModel.php",
 			"settings":
 			{
-				"buffer_size": 3746,
-				"line_ending": "Windows"
+				"buffer_size": 1632,
+				"line_ending": "Windows",
+				"name": "<?php"
 			}
 		},
 		{
-			"file": "APP/contacto.html",
+			"file": "WebServices/Mascota.php",
 			"settings":
 			{
-				"buffer_size": 5253,
-				"line_ending": "Windows"
+				"buffer_size": 896,
+				"line_ending": "Windows",
+				"name": "<?php"
 			}
 		},
 		{
-			"file": "APP/localizar.html",
+			"file": "WebServices/TrackingMascota.php",
 			"settings":
 			{
-				"buffer_size": 3904,
-				"line_ending": "Windows"
+				"buffer_size": 1202,
+				"line_ending": "Windows",
+				"name": "<?php"
 			}
 		},
 		{
-			"file": "APP/pruebageo.html",
+			"file": "WebServices/UserDueno.php",
 			"settings":
 			{
-				"buffer_size": 1158,
-				"line_ending": "Windows"
+				"buffer_size": 1220,
+				"line_ending": "Windows",
+				"name": "<?php"
 			}
 		},
 		{
-			"file": "APP/regMascota.html",
+			"file": "WebServices/RelDuenoMascota.php",
 			"settings":
 			{
-				"buffer_size": 5842,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "APP/consultar.html",
-			"settings":
-			{
-				"buffer_size": 5224,
+				"buffer_size": 809,
 				"line_ending": "Windows"
 			}
 		}
@@ -121,20 +136,29 @@
 	},
 	"expanded_folders":
 	[
-		"/C/Users/Edgar/Documents/Poyecto_petunia",
-		"/C/Users/Edgar/Documents/Poyecto_petunia/APP",
-		"/C/Users/Edgar/Documents/Poyecto_petunia/APP/img",
-		"/C/Users/Edgar/Documents/Poyecto_petunia/APP/js",
-		"/C/Users/Edgar/Documents/Poyecto_petunia/APP/js/vendor"
+		"/C/Users/Edgar/Documents/GitHub/Proyecto_Petunia",
+		"/C/Users/Edgar/Documents/GitHub/Proyecto_Petunia/WebServices"
 	],
 	"file_history":
 	[
+		"/C/wamp/alias/webservices.conf",
+		"/C/wamp/alias/phpmyadmin.conf",
+		"/C/wamp/alias/webgrind.conf",
+		"/C/wamp/bin/apache/apache2.4.9/conf/httpd.conf",
+		"/C/Users/Edgar/Documents/GitHub/Proyecto_Petunia/APP/localizar.html",
+		"/C/Users/Edgar/Documents/GitHub/Proyecto_Petunia/APP/index.html",
+		"/C/Users/Edgar/Documents/GitHub/Proyecto_Petunia/APP/bienvenida.html",
+		"/C/Users/Edgar/Documents/GitHub/Proyecto_Petunia/APP/principal.html",
+		"/C/Users/Edgar/Documents/GitHub/Proyecto_Petunia/APP/contacto.html",
+		"/C/Users/Edgar/Documents/GitHub/Proyecto_Petunia/APP/pruebageo.html",
+		"/C/Users/Edgar/Documents/GitHub/Proyecto_Petunia/APP/regMascota.html",
+		"/C/Users/Edgar/Documents/GitHub/Proyecto_Petunia/APP/consultar.html",
 		"/C/Users/Edgar/Documents/Poyecto_petunia/WebServices/Crud.php",
 		"/C/Users/Edgar/Desktop/hola.html"
 	],
 	"find":
 	{
-		"height": 27.0
+		"height": 30.0
 	},
 	"find_in_files":
 	{
@@ -148,6 +172,23 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"bigint(20)			No	Ninguna		Cambiar Cambiar	Eliminar Eliminar	\nPrimaria Primaria\nÚnico Único\nÍndice Índice\nEspacial Espacial\nMás",
+			"varchar(255)	latin1_swedish_ci		No	Ninguna		Cambiar Cambiar	Eliminar Eliminar	\nPrimaria Primaria\nÚnico Único\nÍndice Índice\nEspacial Espacial\nMás",
+			"bigint(20)			No	Ninguna		Cambiar Cambiar	Eliminar Eliminar	\nPrimaria Primaria\nÚnico Único\nÍndice Índice\nEspacial Espacial\nMás",
+			"private",
+			"function",
+			"bigint(20)",
+			"bigint(20)			No	Ninguna	AUTO_INCREMENT	Cambiar Cambiar	Eliminar Eliminar	\nPrimaria Primaria\nÚnico Único\nMás",
+			"bigint(20)			No	Ninguna		Cambiar Cambiar	Eliminar Eliminar	\nPrimaria Primaria\nÚnico Único\nÍndice Índice\nMás",
+			"	varchar(255)	latin1_swedish_ci		No	Ninguna		Cambiar Cambiar	Eliminar Eliminar	\nPrimaria Primaria\nÚnico Único\nÍndice Índice\nMás",
+			"mensaje",
+			"mensjae",
+			"$",
+			"get",
+			";",
+			"private $",
+			"	latin1_swedish_ci		No	Ninguna		Cambiar Cambiar	Eliminar Eliminar	\nPrimaria Primaria\nÚnico Único\nÍndice Índice\nMás",
+			"\\",
 			"map"
 		],
 		"highlight": true,
@@ -166,106 +207,131 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 5,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "APP/index.html",
+					"file": "WebServices/Crud.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5307,
+						"buffer_size": 702,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4430,
-								4430
+								370,
+								370
 							]
 						],
 						"settings":
 						{
-							"auto_name": "index.html",
-							"syntax": "Packages/HTML/HTML.tmLanguage"
+							"syntax": "Packages/PHP/PHP.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 2242.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "APP/bienvenida.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3996,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								3996
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": false,
-							"word_wrap": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 705.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "APP/principal.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3746,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								3746
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 603.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 5,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "APP/contacto.html",
+					"buffer": 1,
+					"file": "WebServices/DBAbstractModel.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5253,
+						"buffer_size": 1632,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								21,
+								36
+							]
+						],
+						"settings":
+						{
+							"auto_name": "<?php",
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "WebServices/Mascota.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 896,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5,
+								41
+							]
+						],
+						"settings":
+						{
+							"auto_name": "<?php",
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "WebServices/TrackingMascota.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1202,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								706,
+								706
+							]
+						],
+						"settings":
+						{
+							"auto_name": "<?php",
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1001.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "WebServices/UserDueno.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1220,
 						"regions":
 						{
 						},
@@ -273,74 +339,13 @@
 						[
 							[
 								0,
-								5253
+								42
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1356.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "APP/localizar.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3904,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3298,
-								3298
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 945.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "APP/pruebageo.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1158,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								262,
-								181
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"auto_name": "<?php",
+							"syntax": "Packages/PHP/PHP.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -350,63 +355,32 @@
 					"type": "text"
 				},
 				{
-					"buffer": 6,
-					"file": "APP/regMascota.html",
+					"buffer": 5,
+					"file": "WebServices/RelDuenoMascota.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5842,
+						"buffer_size": 809,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2087,
-								2087
+								737,
+								737
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"auto_name": "",
+							"syntax": "Packages/PHP/PHP.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 437.0,
+						"translation.y": 186.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "APP/consultar.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5224,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2090,
-								2090
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 551.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -414,7 +388,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 27.0
+		"height": 30.0
 	},
 	"input":
 	{
@@ -451,7 +425,7 @@
 	"project": "project_petunia.sublime-project",
 	"replace":
 	{
-		"height": 50.0
+		"height": 56.0
 	},
 	"save_all_on_build": true,
 	"select_file":

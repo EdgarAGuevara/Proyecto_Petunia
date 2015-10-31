@@ -3,7 +3,7 @@ abstract class DBAbstractModel{
 	private static $servername = "localhost";
 	private static $username = "lookin";
 	private static $password = "lookin123";
-	protected $dbname = "lookin";
+	private static $dbname = "lookin";
 	protected $query;
 	protected $rows=array();
 	private $conn;
@@ -17,11 +17,13 @@ abstract class DBAbstractModel{
 	private function open_conn()
 	{
 		$return;
+		$server=self::$servername;
+		$db=self::$dbname;
 		try {
-		    $this->conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+		    $this->conn = new PDO("mysql:host=$server;dbname=$db", self::$username, self::$password);
 		    // set the PDO error mode to exception
-		    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-		    echo "Connected successfully"; 
+		    $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+		    // echo "Connected successfully"; 
 		    $return=true;
 		}catch(PDOException $e){
 		    $this->mensaje= "Connection failed: " . $e->getMessage();
@@ -53,13 +55,33 @@ abstract class DBAbstractModel{
 	    return $return;
 	}
 
-	/*TODO ver si funciona esta vaina*/
-	private function getResult()
+	/*FUNCION PARA CONSULTAS=SELECT*/
+	protected function getResult($class="")
 	{
 		$return;
 		if ($this->open_conn()) {
-			$result=$this->conn->query($this->query);
-			$this->rows=$result;
+			$sth = $this->conn->prepare($this->query);
+			/* create instance automatically */
+			// $sth->setFetchMode( PDO::FETCH_CLASS, 'Mascota');
+			$sth->execute();
+			$this->rows = $sth->fetchAll( PDO::FETCH_CLASS , $class);
+			$sth->closeCursor();
+	    	$return=true;
+			$this->close_conn();
+		} else {
+			$return=false;
+		}		
+	    return $return;
+	}
+
+	/*FUNCION PARA QUERYS SIMPLES DE TIPO  INSERT,DELETE,UPDATE*/
+	protected function setDatos($values)
+	{
+		$return;
+		if ($this->open_conn()) {
+			$sth = $this->conn->prepare($this->query);
+			$sth->execute($values);
+			$sth->closeCursor();
 	    	$return=true;
 			$this->close_conn();
 		} else {
