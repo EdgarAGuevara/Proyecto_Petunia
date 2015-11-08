@@ -18,7 +18,7 @@
                 padding-bottom: 20px;
             }
             #map{
-              width: 700px;
+              width: 100%;
               height: 500px;
               margin: 50px auto;
             }
@@ -44,6 +44,9 @@
             <a class="navbar-brand" href="principal.html">LOOKIN</a>
           </div>
           <div id="menuIngresar" class="navbar-collapse collapse">
+            <div class="navbar-form navbar-right">
+              <button id="btnSalir"  class="btn btn-success" onclick="salir();">SALIR</button>
+            </div>
             <ul class="nav navbar-nav">
               <li><a href="regmascota.html">Registro Mascota</a></li>
               <li><a href="">Localizar</a></li>
@@ -63,8 +66,25 @@
 
       <!-- MAIN -->
       <div class="container">
-        <div id="map">
-            askdlsajkldslk
+        <div class="alert alert-dismissible sr-only" role="alert" id="msgInfo">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span></button>
+          <span id="msg"> </span>
+        </div>
+        <div>
+          <div class="input-group input-group-lg">
+            <span class="input-group-addon" id="sizing-addon1">Mascota a Localizar</span>
+              <select id="cmbMascotas" class="form-control" required>
+                <option value="1">...</option>
+              </select>
+          </div>
+          <br>
+          <div class="text-center">
+              <button class="btn-lg btn-success" onclick="getLoca();">Localizar</button>
+          </div>
+        </div>
+        <div id="map" class="map_canvas">
+          <h3>Cargando sus Localizaciones</h3>
         </div>        
         
         <hr>
@@ -79,20 +99,9 @@
 
       <script src="js/vendor/bootstrap.min.js"></script>
 
-      <script src="js/main.js"></script>
+      <script src="js/localizar.js"></script>
+      <script src="js/util.js"></script>
 
-      <!-- GEOLOCALIZACION -->
-      <script>
-        function initMap() {
-          ;
-          // Create a map object and specify the DOM element for display.
-          var map = new google.maps.Map(document.getElementById('map'), {
-            center: {lat: -34.397, lng: 150.644},
-            scrollwheel: false,
-            zoom: 8
-          });
-        }
-      </script>
       <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZ65IYzF2KVqtPJesLyhHJ-O10hluz8dQ&signed_in=true&callback=initMap"
         async defer>
       </script>

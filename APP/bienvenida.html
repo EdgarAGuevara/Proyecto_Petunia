@@ -41,7 +41,7 @@
 	        <div id="menuIngresar" class="navbar-collapse collapse">
 	          <form class="navbar-form navbar-right" role="form" action="principal.html" id="formIngresar">
 	            <div class="form-group">
-	              <input id="txtNick" type="correo" placeholder="correo@dominio.com" class="form-control">
+	              <input id="txtNick" type="email" placeholder="correo@dominio.com" class="form-control">
 	            </div>
 	            <div class="form-group">
 	              <input id="txtPass" type="password" placeholder="Contraseña" class="form-control">
@@ -73,7 +73,11 @@
 
 	    <div class="container">
 	      <hr>
-
+		   <div class="alert alert-dismissible sr-only" role="alert" id="msgInfo">
+	        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+	        <span aria-hidden="true">&times;</span></button>
+	        <span id="msg"> </span>
+	      </div>
 	      <footer>
 	        <p>&copy; Lookin 2015</p>
 	      </footer>
@@ -88,6 +92,7 @@
 	    <script src="js/vendor/bootstrap.min.js"></script>
 
 	    <script src="js/main.js"></script>
+        <script src="js/util.js"></script>
 
 	    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 	    <script>

@@ -44,15 +44,15 @@ function buscarDataTable () {
         if( response.success ) {
             console.log(response.data);
             console.log(Object.keys(response.data.users).length);
+            mostrarMensaje(response.data.message,'alert-success');
             llenarTabla(response.data.users);
         } else {
-            //response.success no es true
-            // $("#response-container").html('No ha habido suerte: ' + response.data.message);
+            mostrarMensaje(response.data.message,'alert-danger');
             console.log(response.data.message);
         }
     })
     .fail(function( jqXHR, textStatus, errorThrown ) {
-        $("#response-container").html("Algo ha fallado: " +  textStatus);
-         console.log(textStatus);
+        mostrarMensaje("Algo ha fallado: " +  textStatus,'alert-danger');
+        console.log(textStatus);
     });
 }

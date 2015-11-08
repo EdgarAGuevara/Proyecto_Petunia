@@ -39,7 +39,9 @@
           <a class="navbar-brand" href="">LOOKIN</a>
         </div>
         <div id="menuIngresar" class="navbar-collapse collapse">
-                
+          <div class="navbar-form navbar-right">
+            <button id="btnSalir"  class="btn btn-success" onclick="salir();">SALIR</button>
+          </div>
 		  <ul class="nav navbar-nav">
 	        <li><a href="regmascota.html">Registro Mascota</a></li>
 	        <li><a href="localizar.html">Localizar</a></li>
@@ -53,7 +55,7 @@
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
       <div class="container">
-        <h1>Bienvenido a Lookin Petunia Flores  </h1>
+        <h1>Bienvenido a Lookin. <br> <span id="lblNombreUser"></span> </h1>
         <p>AQUI VA PEQUEÑA DESCRIPCION DE LA APP</p>
         <!-- <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p> -->
       </div>
@@ -61,7 +63,11 @@
 
     <div class="container">
       <hr>
-
+      <div class="alert alert-dismissible sr-only" role="alert" id="msgInfo">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span></button>
+        <span id="msg"> </span>
+      </div>
       <footer>
         <p>&copy; Lookin 2015</p>
       </footer>
@@ -73,7 +79,8 @@
 
         <script src="js/vendor/bootstrap.min.js"></script>
 
-        <script src="js/main.js"></script>
+        <script src="js/principal.js"></script>
+        <script src="js/util.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>

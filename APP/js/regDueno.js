@@ -51,4 +51,6 @@ $('#regUser').submit(function(e){
 
 });
 
+
+
 /*Funcion limpiar*/

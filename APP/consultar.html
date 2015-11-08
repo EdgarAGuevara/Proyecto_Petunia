@@ -39,12 +39,15 @@
           <a class="navbar-brand" href="principal.html">LOOKIN</a>
         </div>
         <div id="menuIngresar" class="navbar-collapse collapse">
-           <ul class="nav navbar-nav">
-	        <li><a href="regmascota.html">Registro Mascota</a></li>
-	        <li><a href="localizar.html">Localizar</a></li>
-	        <li><a href="consultar.html">Consultar</a></li>
-	        <li><a href="contacto.html">Contactanos</a></li>
-	      </ul>
+          <div class="navbar-form navbar-right">
+            <button id="btnSalir"  class="btn btn-success" onclick="salir();">SALIR</button>
+          </div>
+          <ul class="nav navbar-nav">
+  	        <li><a href="regmascota.html">Registro Mascota</a></li>
+  	        <li><a href="localizar.html">Localizar</a></li>
+  	        <li><a href="consultar.html">Consultar</a></li>
+  	        <li><a href="contacto.html">Contactanos</a></li>
+	        </ul>
         </div><!--/.navbar-collapse -->
       </div>
     </nav>
@@ -59,7 +62,11 @@
 
     <!-- MAIN -->
     <div class="container">
-
+      <div class="alert alert-dismissible sr-only" role="alert" id="msgInfo">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span></button>
+        <span id="msg"> </span>
+      </div>
       <div id="tablaConsulta"  class="table-responsive">
         <table class="table table-hover ">
           <thead>
@@ -69,7 +76,6 @@
               <th>Color</th>
               <th>Tamaño</th>
               <th>GPS/ID</th>
-              <th>ID</th>
               <!-- <th></th> -->
             </tr>
           </thead>
@@ -92,6 +98,7 @@
         <script src="js/vendor/bootstrap.min.js"></script>
 
         <script src="js/consultar.js"></script>
+        <script src="js/util.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
