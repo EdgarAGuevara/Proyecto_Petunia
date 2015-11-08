@@ -10,6 +10,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <link rel="shortcut icon" href="favicon1.ico">
 
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <style>
@@ -18,7 +19,7 @@
                 padding-bottom: 20px;
             }
         </style>
-        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="css/bootstrap-theme.css">
         <link rel="stylesheet" href="css/main.css">
 
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
@@ -27,7 +28,7 @@
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menuIngresar" aria-expanded="false" aria-controls="navbar">
@@ -39,7 +40,9 @@
           <a class="navbar-brand" href="">LOOKIN</a>
         </div>
         <div id="menuIngresar" class="navbar-collapse collapse">
-                
+          <div class="navbar-form navbar-right">
+            <button id="btnSalir"  class="btn btn-success" onclick="salir();">SALIR</button>
+          </div>
 		  <ul class="nav navbar-nav">
 	        <li><a href="regmascota.html">Registro Mascota</a></li>
 	        <li><a href="localizar.html">Localizar</a></li>
@@ -53,7 +56,7 @@
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
       <div class="container">
-        <h1>Bienvenido a Lookin Petunia Flores  </h1>
+        <h1>Bienvenido a Lookin. <br> <span id="lblNombreUser"></span> </h1>
         <p>AQUI VA PEQUEÑA DESCRIPCION DE LA APP</p>
         <!-- <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p> -->
       </div>
@@ -61,7 +64,11 @@
 
     <div class="container">
       <hr>
-
+      <div class="alert alert-dismissible sr-only" role="alert" id="msgInfo">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span></button>
+        <span id="msg"> </span>
+      </div>
       <footer>
         <p>&copy; Lookin 2015</p>
       </footer>
@@ -73,7 +80,8 @@
 
         <script src="js/vendor/bootstrap.min.js"></script>
 
-        <script src="js/main.js"></script>
+        <script src="js/principal.js"></script>
+        <script src="js/util.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>

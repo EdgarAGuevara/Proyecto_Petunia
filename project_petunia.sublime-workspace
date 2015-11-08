@@ -4,6 +4,82 @@
 		"selected_items":
 		[
 			[
+				"on",
+				"onclick	Attr"
+			],
+			[
+				"getId",
+				"getId_gps"
+			],
+			[
+				"Tra",
+				"TrackingMascota"
+			],
+			[
+				"id_",
+				"id_gps"
+			],
+			[
+				"setN",
+				"setNum_identificacion"
+			],
+			[
+				"if",
+				"ife	if … else"
+			],
+			[
+				"l",
+				"length"
+			],
+			[
+				"fo",
+				"for	for (…) {…}"
+			],
+			[
+				"id",
+				"id_mascota"
+			],
+			[
+				"c",
+				"clear"
+			],
+			[
+				"qu",
+				"query"
+			],
+			[
+				"nom",
+				"setNombre"
+			],
+			[
+				"User",
+				"UserDueno"
+			],
+			[
+				"user_",
+				"user_dueno"
+			],
+			[
+				"getI",
+				"getId_mascota"
+			],
+			[
+				"getR",
+				"getRaza"
+			],
+			[
+				"mas",
+				"mascotas"
+			],
+			[
+				"for",
+				"for	for …"
+			],
+			[
+				"fetchAll",
+				"pg_fetch_all"
+			],
+			[
 				"f",
 				"fun	function …"
 			],
@@ -12,16 +88,8 @@
 				"incl1	include_once …"
 			],
 			[
-				"c",
-				"class	class …"
-			],
-			[
 				"close",
 				"close_conn"
-			],
-			[
-				"if",
-				"ifelse	if … else …"
 			],
 			[
 				"th",
@@ -44,57 +112,10 @@
 	"buffers":
 	[
 		{
-			"contents": "<?php\n$servername = \"localhost\";\n$username = \"lookin\";\n$password = \"lookin123\";\n$dbname = \"lookin\";\n\ntry {\n    $conn = new PDO(\"mysql:host=$servername;dbname=$dbname\", $username, $password);\n    // set the PDO error mode to exception\n    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);\n    echo \"Connected successfully\"; \n\n    $sql = \"INSERT INTO mascota (firstname, lastname, email)\n	VALUES ('John', 'Doe', 'john@example.com')\";\n\n	if ($conn->query($sql) === TRUE) {\n	    echo \"New record created successfully\";\n	} else {\n	    echo \"Error: \" . $sql . \"<br>\" . $conn->error;\n	}\n	$conn=null;\n    }\ncatch(PDOException $e)\n    {\n    echo \"Connection failed: \" . $e->getMessage();\n    }\n\n\n?>",
-			"file": "WebServices/Crud.php",
-			"file_size": 467,
-			"file_write_time": 130903786984508798,
+			"file": "APP/js/consultar.js",
 			"settings":
 			{
-				"buffer_size": 702,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "WebServices/DBAbstractModel.php",
-			"settings":
-			{
-				"buffer_size": 1632,
-				"line_ending": "Windows",
-				"name": "<?php"
-			}
-		},
-		{
-			"file": "WebServices/Mascota.php",
-			"settings":
-			{
-				"buffer_size": 896,
-				"line_ending": "Windows",
-				"name": "<?php"
-			}
-		},
-		{
-			"file": "WebServices/TrackingMascota.php",
-			"settings":
-			{
-				"buffer_size": 1202,
-				"line_ending": "Windows",
-				"name": "<?php"
-			}
-		},
-		{
-			"file": "WebServices/UserDueno.php",
-			"settings":
-			{
-				"buffer_size": 1220,
-				"line_ending": "Windows",
-				"name": "<?php"
-			}
-		},
-		{
-			"file": "WebServices/RelDuenoMascota.php",
-			"settings":
-			{
-				"buffer_size": 809,
+				"buffer_size": 5469,
 				"line_ending": "Windows"
 			}
 		}
@@ -137,28 +158,52 @@
 	"expanded_folders":
 	[
 		"/C/Users/Edgar/Documents/GitHub/Proyecto_Petunia",
+		"/C/Users/Edgar/Documents/GitHub/Proyecto_Petunia/APP",
+		"/C/Users/Edgar/Documents/GitHub/Proyecto_Petunia/APP/js",
+		"/C/Users/Edgar/Documents/GitHub/Proyecto_Petunia/PagMascota",
 		"/C/Users/Edgar/Documents/GitHub/Proyecto_Petunia/WebServices"
 	],
 	"file_history":
 	[
+		"/C/Users/Edgar/Documents/GitHub/Proyecto_Petunia/APP/principal.html",
+		"/C/Users/Edgar/Documents/GitHub/Proyecto_Petunia/APP/bienvenida.html",
+		"/C/Users/Edgar/Documents/GitHub/Proyecto_Petunia/APP/js/regDueno.js",
+		"/C/Users/Edgar/Documents/GitHub/Proyecto_Petunia/APP/regdueno.html",
+		"/C/Users/Edgar/Documents/GitHub/Proyecto_Petunia/APP/busdueno.html",
+		"/C/Users/Edgar/Documents/GitHub/Proyecto_Petunia/APP/regMascota.html",
+		"/C/Users/Edgar/Documents/GitHub/Proyecto_Petunia/APP/js/regMascota.js",
+		"/C/Users/Edgar/Documents/GitHub/Proyecto_Petunia/APP/js/consultar.js",
+		"/C/Users/Edgar/Documents/GitHub/Proyecto_Petunia/APP/js/localizar.js",
+		"/C/Users/Edgar/Documents/GitHub/Proyecto_Petunia/APP/js/principal.js",
+		"/C/Users/Edgar/Documents/GitHub/Proyecto_Petunia/APP/localizar.html",
+		"/C/Users/Edgar/Documents/GitHub/Proyecto_Petunia/APP/consultar.html",
+		"/C/Users/Edgar/Documents/GitHub/Proyecto_Petunia/PagMascota/pagmascota.html",
+		"/C/Users/Edgar/Documents/GitHub/Proyecto_Petunia/PagMascota/js/pagmascota.js",
+		"/C/Users/Edgar/Documents/GitHub/Proyecto_Petunia/WebServices/crudTrackingMascota.php",
+		"/C/Users/Edgar/Documents/GitHub/Proyecto_Petunia/WebServices/TrackingMascota.php",
+		"/C/Users/Edgar/Documents/GitHub/Proyecto_Petunia/WebServices/crudMascota.php",
+		"/C/Users/Edgar/Documents/GitHub/Proyecto_Petunia/WebServices/Mascota.php",
+		"/C/Users/Edgar/Documents/GitHub/Proyecto_Petunia/APP/js/util.js",
+		"/C/Users/Edgar/Documents/GitHub/Proyecto_Petunia/APP/contacto.html",
+		"/C/Users/Edgar/Documents/GitHub/Proyecto_Petunia/APP/js/busdueno.js",
+		"/C/Users/Edgar/Documents/GitHub/Proyecto_Petunia/APP/js/main.js",
+		"/C/Users/Edgar/Documents/GitHub/Proyecto_Petunia/WebServices/crudUserDueno.php",
+		"/C/Users/Edgar/Documents/GitHub/Proyecto_Petunia/WebServices/UserDueno.php",
+		"/C/Users/Edgar/Documents/GitHub/Proyecto_Petunia/WebServices/DBAbstractModel.php",
+		"/C/Users/Edgar/Documents/GitHub/Proyecto_Petunia/WebServices/RelDuenoMascota.php",
+		"/C/Users/Edgar/Documents/GitHub/Proyecto_Petunia/WebServices/test.php",
 		"/C/wamp/alias/webservices.conf",
 		"/C/wamp/alias/phpmyadmin.conf",
 		"/C/wamp/alias/webgrind.conf",
 		"/C/wamp/bin/apache/apache2.4.9/conf/httpd.conf",
-		"/C/Users/Edgar/Documents/GitHub/Proyecto_Petunia/APP/localizar.html",
 		"/C/Users/Edgar/Documents/GitHub/Proyecto_Petunia/APP/index.html",
-		"/C/Users/Edgar/Documents/GitHub/Proyecto_Petunia/APP/bienvenida.html",
-		"/C/Users/Edgar/Documents/GitHub/Proyecto_Petunia/APP/principal.html",
-		"/C/Users/Edgar/Documents/GitHub/Proyecto_Petunia/APP/contacto.html",
 		"/C/Users/Edgar/Documents/GitHub/Proyecto_Petunia/APP/pruebageo.html",
-		"/C/Users/Edgar/Documents/GitHub/Proyecto_Petunia/APP/regMascota.html",
-		"/C/Users/Edgar/Documents/GitHub/Proyecto_Petunia/APP/consultar.html",
 		"/C/Users/Edgar/Documents/Poyecto_petunia/WebServices/Crud.php",
 		"/C/Users/Edgar/Desktop/hola.html"
 	],
 	"find":
 	{
-		"height": 30.0
+		"height": 27.0
 	},
 	"find_in_files":
 	{
@@ -172,6 +217,78 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"val",
+			"mascota",
+			"setLocaMascota",
+			"localStore",
+			"getLoca",
+			"idMascota",
+			"TrackingMascota",
+			"mascotas",
+			"TrackingMascotas",
+			"mascota",
+			"Mascota",
+			"mascota",
+			"Mascota",
+			"mascota",
+			"Tamano",
+			"tamano",
+			"Color",
+			"color",
+			"Raza",
+			"raza",
+			"mascotas",
+			"idDueno",
+			"getMascotacnId",
+			"cmbTipoIden",
+			"-error",
+			"error",
+			"span",
+			"id_mascota",
+			"users",
+			"-error",
+			"error",
+			"mascota",
+			",",
+			"num_iden_dueno",
+			"gps",
+			"tamano",
+			"color",
+			"raza",
+			"response.data.users[0].nombre",
+			"masctoa",
+			"session",
+			"tableId",
+			"'",
+			"+<",
+			">+",
+			"\"",
+			"data",
+			"span",
+			"users",
+			"res",
+			"body",
+			"mascotas",
+			"users",
+			",",
+			"localStorage",
+			"tipo_identifiacion",
+			"Tipo_identifiacion",
+			"setTipo_identifiacion",
+			"tipo_identifiacion",
+			"tipo_identificacion",
+			"nombre",
+			"Nombre",
+			"nombre",
+			"Nombre",
+			"nombre",
+			"Nombre",
+			"nombre",
+			"getResult",
+			"$",
+			"g",
+			"this",
+			"public",
 			"bigint(20)			No	Ninguna		Cambiar Cambiar	Eliminar Eliminar	\nPrimaria Primaria\nÚnico Único\nÍndice Índice\nEspacial Espacial\nMás",
 			"varchar(255)	latin1_swedish_ci		No	Ninguna		Cambiar Cambiar	Eliminar Eliminar	\nPrimaria Primaria\nÚnico Único\nÍndice Índice\nEspacial Espacial\nMás",
 			"bigint(20)			No	Ninguna		Cambiar Cambiar	Eliminar Eliminar	\nPrimaria Primaria\nÚnico Único\nÍndice Índice\nEspacial Espacial\nMás",
@@ -207,177 +324,34 @@
 	"groups":
 	[
 		{
-			"selected": 5,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "WebServices/Crud.php",
+					"file": "APP/js/consultar.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 702,
+						"buffer_size": 5469,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								370,
-								370
+								1352,
+								1358
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.tmLanguage"
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "WebServices/DBAbstractModel.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1632,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								21,
-								36
-							]
-						],
-						"settings":
-						{
-							"auto_name": "<?php",
-							"syntax": "Packages/PHP/PHP.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "WebServices/Mascota.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 896,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								5,
-								41
-							]
-						],
-						"settings":
-						{
-							"auto_name": "<?php",
-							"syntax": "Packages/PHP/PHP.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "WebServices/TrackingMascota.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1202,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								706,
-								706
-							]
-						],
-						"settings":
-						{
-							"auto_name": "<?php",
-							"syntax": "Packages/PHP/PHP.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 1001.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "WebServices/UserDueno.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1220,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								42
-							]
-						],
-						"settings":
-						{
-							"auto_name": "<?php",
-							"syntax": "Packages/PHP/PHP.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "WebServices/RelDuenoMascota.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 809,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								737,
-								737
-							]
-						],
-						"settings":
-						{
-							"auto_name": "",
-							"syntax": "Packages/PHP/PHP.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 186.0,
+						"translation.y": 532.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -388,7 +362,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 30.0
+		"height": 27.0
 	},
 	"input":
 	{
@@ -425,7 +399,7 @@
 	"project": "project_petunia.sublime-project",
 	"replace":
 	{
-		"height": 56.0
+		"height": 50.0
 	},
 	"save_all_on_build": true,
 	"select_file":

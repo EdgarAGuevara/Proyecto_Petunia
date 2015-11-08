@@ -4,10 +4,10 @@ $(document).ready(function(){
         window.location.href="bienvenida.html";
     } else{
         //getdeails será nuestra función para enviar la solicitud ajax
-        var setMascotaNueva = function(nombre,raza,color,tamano,gps,num_iden_dueno){
+        var editMascota= function(nombre,raza,color,tamano,gps,num_iden_dueno){
           return $.ajax({
             // En data puedes utilizar un objeto JSON, un array o un query string
-            data: {"solicitud" : "setMascotaNueva", "nombre":nombre,"raza":raza,"color":color,"tamano":tamano,"gps":gps,"num_iden_dueno":num_iden_dueno},
+            data: {"solicitud" : "edit", "nombre":nombre,"raza":raza,"color":color,"tamano":tamano,"gps":gps,"num_iden_dueno":num_iden_dueno},
             //Cambiar a type: POST si necesario
             type: "GET",
             // Formato de datos que se espera en la respuesta
@@ -18,6 +18,7 @@ $(document).ready(function(){
             url: "http://192.168.1.109/webservices/webservices/crudMascota.php",
             });
     };
+    llenarTabla();
 }
 
 
@@ -28,14 +29,16 @@ $('#segMascota').submit(function(e){
     //Mostramos texto de que la solicitud está en curso
     // $("#response-container").html("<p>Buscando...</p>");
     //this hace referencia al elemento que ha lanzado el evento click
-    setMascotaNueva($('#txtNombre').val(),$('#txtRaza').val(),$('#txtColor').val(),$('#cmbTamano').val(),$('#txtIdMascota').val(),sessionStorage.userNum_identificacion)
+    editMascota($('#txtNombre').val(),$('#txtRaza').val(),$('#txtColor').val(),$('#cmbTamano').val(),localStorage.getItem("mascotaEdit_IDGPS"),sessionStorage.userNum_identificacion)
         .done( function( response ) {
             //done() es ejecutada cuándo se recibe la respuesta del servidor. response es el objeto JSON recibido
             if( response.success ) {
 	            console.log(response.data);
                 console.log(response.data.message);
                 mostrarMensaje(response.data.message,'alert-success');
-                $('#segMascota')[0].reset();
+                alert(response.data.message);
+                cancelar();
+                // $('#segMascota')[0].reset();
             } else {
                 console.log(response.data.message);
                 mostrarMensaje(response.data.message,'alert-danger');
@@ -54,4 +57,35 @@ function salir () {
     sessionStorage.clear();   
     /*Reedireccionar a la pantalla principal*/
     window.location.href="bienvenida.html";   
+}
+function cancelar () {
+    /*Limpiar el session Storage*/
+    localStorage.clear();   
+    /*Reedireccionar a la pantalla principal*/
+    window.location.href="consultar.html";   
+}
+
+
+function llenarTabla () {
+    var datos="";
+    var tamano="";
+    $('#bodyTable').html('');    
+    // alert("HOLA");
+    /*cableamos el tamaño de la mascota*/
+    switch(localStorage.getItem("mascotaEdit_Tamano")){
+        case "PEQUEÑO":
+            tamano=1;
+        break;
+        case "MEDIANO":
+            tamano=2;
+        break;
+        case "GRANDE":
+            tamano=3;
+        break;
+    }
+   $('#txtNombre').val(localStorage.getItem("mascotaEdit_Nombre"));
+   $('#txtRaza').val(localStorage.getItem("mascotaEdit_Raza"));
+   $('#txtColor').val(localStorage.getItem("mascotaEdit_Color"));
+   $('#cmbTamano option[value="'+tamano+'"]').attr('selected','selected');
+   $('#txtIdMascota').val(localStorage.getItem("mascotaEdit_IDGPS"));
 }

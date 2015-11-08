@@ -81,6 +81,7 @@ abstract class DBAbstractModel{
 		if ($this->open_conn()) {
 			$sth = $this->conn->prepare($this->query);
 			$sth->execute($values);
+			// var_dump($sth->execute($values));
 			$sth->closeCursor();
 	    	$return=true;
 			$this->close_conn();

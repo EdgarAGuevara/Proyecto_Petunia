@@ -48,6 +48,47 @@ class TrackingMascota extends DBAbstractModel
 	}
 
 	
+	public function get($class='')
+	{
+		$this->query="SELECT * FROM tracking_mascota WHERE id_mascota=".$this->getId_mascota()." order by id_tracking_mascota DESC";
+		// var_dump($this->query);
+		if ($this->getResult($class)) {
+			// var_dump();
+			return $this->rows;
+		} else {
+			return false;
+		}
+	}
+
+
+	public function set()
+	{
+
+		$this->query="INSERT INTO tracking_mascota (id_mascota,id_gps,longitud_localizacion,latitud_localizacion) 
+						VALUES (?,?,?,?)";
+		$values= array($this->getId_mascota(),
+			$this->getId_gps(),
+			$this->getLongitud_localizacion(),
+			$this->getLatitud_localizacion()
+		);
+		// echo "O";
+		// var_dump($values);
+		if ($this->setDatos($values)) {
+			// var_dump($this->rows);
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	public function edit(){
+
+	}
+
+	public function delete(){
+
+	}
+
 	// function __construct(argument)
 	// {
 	// 	# code...

@@ -57,7 +57,19 @@ Class Mascota extends DBAbstractModel  {
 	public function get($class='')
 	{
 		$this->query="select * from mascota where num_identificacion_dueno=".$this->getNum_id_dueno();
-		var_dump($this->query);
+		// var_dump($this->query);
+		if ($this->getResult($class)) {
+			// var_dump();
+			return $this->rows;
+		} else {
+			return false;
+		}
+	}
+
+	public function getMascotacnId($class='')
+	{
+		$this->query="select * from mascota where id_gps=".$this->getId_mascota();
+		// var_dump($this->query);
 		if ($this->getResult($class)) {
 			// var_dump();
 			return $this->rows;
@@ -101,17 +113,18 @@ Class Mascota extends DBAbstractModel  {
 	public function edit()
 	{
 		$this->query="UPDATE mascota SET nombre_mascota=?,raza=?,color=?,tamano=?,id_gps=? 
-						WHERE id_mascota=?";
+						WHERE id_gps=?";
 		$values= array($this->getNombre_mascota(),
 			$this->getRaza(),
 			$this->getColor(),
 			$this->getTamano(),
 			$this->getId_gps(),
-			$this->getId_mascota() );
-		var_dump($values);
+			$this->getId_gps() );
+		// var_dump($this->query);
+		// var_dump($values);
 		if ($this->setDatos($values)) {
 			// var_dump();
-			return $this->rows;
+			return true;
 		} else {
 			return false;
 		}

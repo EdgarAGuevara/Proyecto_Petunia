@@ -44,6 +44,7 @@ $('#formIngresar').submit(function(e){
                 // $("#response-container").html(output);
                 console.log(response.data);
                 console.log(response.data.message);
+                mostrarMensaje(response.data.message,'alert-success');
                 localStorage.clear();
                 sessionStorage.clear();
                 sessionStorage.setItem("userNombre", response.data.users[0].nombre);
@@ -55,14 +56,13 @@ $('#formIngresar').submit(function(e){
                 
                 $('#formIngresar').unbind('submit').submit();
             } else {
-                //response.success no es true
-                // $("#response-container").html('No ha habido suerte: ' + response.data.message);
+                mostrarMensaje(response.data.message,'alert-danger');
                 console.log(response.data.message);
             }
         })
         .fail(function( jqXHR, textStatus, errorThrown ) {
-            $("#response-container").html("Algo ha fallado: " +  textStatus);
-             console.log(textStatus);
+            mostrarMensaje("Algo ha fallado: " +  textStatus,'alert-danger');
+            console.log(textStatus);
         });
     });
 });

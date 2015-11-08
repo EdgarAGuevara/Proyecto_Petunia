@@ -12,7 +12,12 @@ if( isset($_GET['solicitud']) ) {
 	case 'delete':
   		delete($_GET['id_mascota']);
  		break;	
- 	
+ 	case 'getMascotacnId':
+  		getMascotacnId($_GET['idMascota']);
+ 		break;	
+ 	case 'edit':
+  		edit($_GET['nombre'],$_GET['raza'],$_GET['color'],$_GET['tamano'],$_GET['gps'],$_GET['num_iden_dueno']);
+ 		break;
  	default:
  		# code...
  		break;
@@ -45,6 +50,33 @@ function setMascotaNueva($nombre="",$raza="",$color="",$tamano="",$gps="",$num_i
 	    );
 	}
 
+	header('Content-type: application/json; charset=utf-8');
+  	echo json_encode($jsondata, JSON_FORCE_OBJECT);	
+}
+
+function edit($nombre="",$raza="",$color="",$tamano="",$gps="",$num_iden_dueno="")
+{
+	$mascota= new Mascota;
+	// echo $nick;
+	$mascota->setNombre_mascota($nombre);
+	$mascota->setRaza($raza);
+	$mascota->setColor($color);
+	$mascota->setTamano($tamano);
+	$mascota->setId_gps($gps);
+	$mascota->setNum_id_dueno($num_iden_dueno);
+	$res=$mascota->edit();
+	if ($res!=false) {
+		$jsondata = array();
+		$jsondata["success"] = true;
+	    $jsondata["data"]["message"] = "Se modifico con exito su mascota ";
+	    // $jsondata["data"]["users"] = array();
+	    // var_dump($res);
+	} else {
+		$jsondata["success"] = false;
+	    $jsondata["data"] = array(
+	      'message' => 'No se pudo modifica su mascota.'
+	    );
+	}
 	header('Content-type: application/json; charset=utf-8');
   	echo json_encode($jsondata, JSON_FORCE_OBJECT);	
 }
@@ -107,6 +139,40 @@ function delete($id_mascota="")
   	echo json_encode($jsondata, JSON_FORCE_OBJECT);	
 }
 
+function getMascotacnId($idMascota="")
+{
+	$mascota= new Mascota;
+	// echo $nick;
+	$mascota->setId_mascota($idMascota);
+	$mascotas=$mascota->getMascotacnId("Mascota");
+	if ($mascotas!=false) {
+		$jsondata = array();
+		$jsondata["success"] = true;
+	    $jsondata["data"]["message"] = "Se Consiguio Mascota";
+	    $jsondata["data"]["mascota"] = array();
+	    // var_dump($mascotas);
+		for ($i=0; $i <(count($mascota)) ; $i++) { 
+			// print("<br>NOMBRE User: ".$users[$i]->getNombre());
+			$jsondata["data"]["mascota"][$i]["id_mascota"] = $mascotas[$i]->getId_mascota();
+			$jsondata["data"]["mascota"][$i]["nombre_mascota"] = $mascotas[$i]->getNombre_mascota();
+			$jsondata["data"]["mascota"][$i]["raza"] = $mascotas[$i]->getRaza();
+			$jsondata["data"]["mascota"][$i]["color"] = $mascotas[$i]->getColor();
+			$jsondata["data"]["mascota"][$i]["tamano"] = $mascotas[$i]->getTamano();
+			$jsondata["data"]["mascota"][$i]["id_gps"] = $mascotas[$i]->getId_gps();
+			$jsondata["data"]["mascota"][$i]["num_id_dueno"] = $mascotas[$i]->getNum_id_dueno();
+			// var_dump($jsondata["data"]["users"]);
+			// var_dump($users[$i]->getNombre());
+		}
+	} else {
+		$jsondata["success"] = false;
+	    $jsondata["data"] = array(
+	      'message' => 'No se consiguieo Mascota.'
+	    );
+	}
+
+	header('Content-type: application/json; charset=utf-8');
+  	echo json_encode($jsondata, JSON_FORCE_OBJECT);	
+}
 exit();
 
 ?>
